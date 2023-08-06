@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Email thông báo</title>
+  <style>
+    /* Thiết lập các kiểu cho email */
+    body {
+      font-family: Arial, sans-serif;
+      line-height: 1.6;
+    }
+
+    .container {
+      max-width: 600px;
+      margin: 0 auto;
+      padding: 20px;
+    }
+
+    h2 {
+      color: #007bff;
+    }
+
+    label {
+      display: block;
+      margin-bottom: 5px;
+    }
+
+    input[type="text"],
+    input[type="email"] {
+      width: 100%;
+      padding: 10px;
+      margin-bottom: 20px;
+    }
+
+    button {
+      background-color: #007bff;
+      color: #fff;
+      padding: 10px 20px;
+      border: none;
+      cursor: pointer;
+    }
+
+    button:hover {
+      background-color: #0056b3;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h2>Thông báo về yêu cầu trao quyền mới</h2>
+    <p>Kính gửi admin của solielmusic,</p>
+    <p>Chúng tôi xin thông báo rằng đã có một yêu cầu trao quyền mới từ người dùng đăng ký mới tên là [Tên người dùng]. Để đảm bảo hệ thống hoạt động một cách an toàn và hiệu quả, chúng tôi đề xuất các bạn xem xét và xác nhận trao quyền cho người dùng này.</p>
+
+    <p><strong>Thông tin về yêu cầu:</strong></p>
+    <p><strong>Tên người dùng:</strong> {{admin.user_name}}</p>
+    <p><strong>Email:</strong> {{admin.email}}</p>
+    <p><strong>Vai trò yêu cầu:</strong> Admin trang soleilmusic</p>
+
+    <p>Hãy xem xét các chú ý sau đây khi thực hiện việc trao quyền:</p>
+    <ol>
+      <li>Xác thực danh tính: Vui lòng kiểm tra kỹ danh tính của người dùng trước khi trao quyền. Đảm bảo rằng đây là một yêu cầu hợp lệ từ người dùng thực sự và không phải là một hình thức tấn công mạo danh.</li>
+      <li>Nguyên tắc của "Tối thiểu là tối đa": Hãy cân nhắc trao quyền với phạm vi tối thiểu nhất cần thiết để người dùng có thể thực hiện công việc của họ một cách hiệu quả. Tránh trao quyền với quyền hạn không cần thiết, để tránh rủi ro bảo mật và lạm dụng quyền.</li>
+      <li>Đánh giá rủi ro: Hãy đánh giá cẩn thận những rủi ro có thể xảy ra khi trao quyền cho người dùng này. Hãy xem xét xem liệu họ có thể tiếp cận thông tin quan trọng hay thực hiện các hành động có thể gây hại cho hệ thống.</li>
+    </ol>
+
+    <p>Vui lòng nhấp vào nút bên dưới để xác nhận việc trao quyền cho người dùng này:</p>
+    <button type="submit">
+        <a href="{{url}}/{{admin_id}}" style="text-decoration: none;">
+          
+          Xác nhận trao quyền
+        </a>
+    </button>
+
+    <p>Nếu bạn không nhận yêu cầu trao quyền này từ người dùng hoặc có bất kỳ câu hỏi nào liên quan đến yêu cầu này, xin vui lòng liên hệ với chúng tôi ngay lập tức.</p>
+
+    <p>Xin cảm ơn sự hỗ trợ của các bạn trong việc duyệt xem và xác nhận yêu cầu trao quyền này.</p>
+
+    <p>Trân trọng,<br>phuckhoa81@gmail.com<br>CFF cua solielmusic<br>email: phuckhoa81@gmail.com, sdt: 0972495038</p>
+  </div>
+</body>
+</html>

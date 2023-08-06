@@ -1,0 +1,344 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+body {
+  background-color: #f0f0f0;
+}
+.pt-60 {
+  padding-top: 60px;
+}
+.ps-125 {
+  padding-left: 125px;
+}
+.text-right {
+  text-align: right;
+}
+.all-border {
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+.section-border {
+  box-shadow: 0 1px #ccc;
+}
+.asside {
+  width: 100px;
+  height: 100%;
+  position: fixed;
+  top: 3.75rem;
+  left: 10px;
+  text-align: center;
+  background-color: rgba(0, 0, 0, 0);
+}
+.icons-nav {
+  text-decoration: none;
+  color: #212529;
+  font-size: 12px;
+}
+.icons-nav i {
+  font-size: 24px;
+}
+.nav-item a i {
+  font-size: 20px;
+  color: #fff;
+}
+
+/* index css */
+.bg-nav {
+  background-color: #212529;
+}
+.button-toggle-nav {
+  outline: none !important;
+  box-shadow: none !important;
+}
+.button-nav-search {
+  color: #212529;
+
+  top: 0;
+  right: 0;
+}
+
+.view-all-quiz,
+.view-all-courses {
+  outline: none;
+  border: none;
+}
+.view-all-quiz:hover,
+.view-all-courses:hover {
+  background-color: #212529;
+  color: #fff;
+}
+.quiz-boxshadow {
+  box-shadow: 0 1px #ccc;
+}
+
+/* end index css */
+
+/* earnings css start */
+
+.earning-heading {
+  line-height: 1.725rem;
+
+  z-index: 1;
+}
+/* .earning-heading::before {
+  content: "";
+  background-color: #212529;
+  width: 400px;
+  height: 100px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 0;
+} */
+
+.billing-cycle-border {
+  border: 1px solid #efefef;
+}
+.billing-cycle-heading,
+.purchases-heading,
+.student-heading {
+  padding: 4px;
+  font-size: 24px;
+  line-height: 1.5rem;
+  font-weight: 500;
+}
+.billing-cycle-title,
+.purchases-title,
+.lastest-member {
+  font-size: 14px;
+  color: #ccccccd5;
+  padding-left: 12px;
+  line-height: 1.25rem;
+}
+/* earnings css end */
+
+/* Courses css start */
+.category,
+.published {
+}
+
+.category-title,
+.published-title {
+  line-height: 2.5rem;
+  margin: 0px 8px;
+}
+.course-title,
+.quiz-title {
+  font-size: 24px;
+  line-height: 5rem;
+}
+.courses-desc,
+.quiz-desc {
+  font-size: 14px;
+  color: #717070;
+  letter-spacing: 1px;
+  line-height: 1.125rem;
+}
+.course-edit-button,
+.add-course-button,
+.seacrh-course-button,
+.add-quiz-button,
+.quiz-edit-button {
+  width: 170px;
+  height: 50px;
+  border-radius: 8px;
+  text-align: center;
+  color: #212529;
+  text-decoration: none;
+  line-height: 1.725rem;
+  text-transform: uppercase;
+  border: 1px solid #ccc;
+}
+.seacrh-course-button {
+  width: 100px;
+}
+
+.course-edit-button:hover,
+.add-course-button:hover,
+.seacrh-course-button:hover,
+.add-quiz-button:hover,
+.quiz-edit-button:hover {
+  background-color: #212529;
+  color: #fff;
+}
+/* course css end  */
+/* report css start */
+
+.report-inf-container {
+}
+.user-visit-title h3 {
+  background-color: #212529;
+  color: #fff;
+  padding: 8px;
+  border-radius: 8px;
+}
+.quantity-visit {
+  font-size: 24px;
+  line-height: 1.5rem;
+  font-weight: 400;
+}
+/* upload courses page */
+.img-upload-container h1 {
+  font-size: 20px;
+  text-align: center;
+  margin: 20px 0 20px;
+}
+.img-upload-container h1 small {
+  display: block;
+  font-size: 15px;
+  padding-top: 8px;
+  color: gray;
+}
+.avatar-upload {
+  position: relative;
+  max-width: 205px;
+  margin: 50px auto;
+}
+.avatar-edit {
+  position: absolute;
+  right: 12px;
+  z-index: 1;
+  top: 10px;
+}
+.img-upload-container label {
+  display: inline-block;
+  width: 34px;
+  height: 34px;
+  margin-bottom: 0;
+  border-radius: 100%;
+  background: #ffffff;
+  border: 1px solid transparent;
+  box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.12);
+  cursor: pointer;
+  font-weight: normal;
+  transition: all 0.2s ease-in-out;
+}
+.img-upload-container label:hover {
+  background: #f1f1f1;
+  border-color: #d6d6d6;
+}
+.img-upload-container label::after {
+  content: "\f040";
+  font-family: "FontAwesome";
+  color: #757575;
+  position: absolute;
+  top: 10px;
+  left: 0;
+  right: 0;
+  text-align: center;
+  margin: auto;
+}
+.avatar-preview {
+  width: 192px;
+  height: 192px;
+  position: relative;
+  border-radius: 100%;
+  border: 6px solid #f8f8f8;
+  box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.1);
+}
+.avatar-preview > div {
+  width: 100%;
+  height: 100%;
+  border-radius: 100%;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.select-mutil-video {
+}
+.upload-video-section-preview-container {
+  height: 50px;
+  width: 100%;
+}
+
+.delete-video-button,
+.move-video-down,
+.move-video-up,
+.change-video-button {
+  border: none;
+  background-color: #fff;
+  outline: none;
+  font-size: 20px;
+  color: #212529;
+  border-radius: 12%;
+}
+.delete-video-button:hover,
+.move-video-down:hover,
+.move-video-up:hover,
+.change-video-button:hover,
+.continue-button:hover,
+.delete-select-video:hover,
+.button-add-video:hover {
+  background-color: #212529;
+  color: #fff;
+}
+.continue-button,
+.delete-select-video,
+.button-add-video {
+  font-size: 16px;
+  border-radius: 4px;
+  background-color: #fff;
+  font-weight: 600;
+  border: 0.5px #ccc solid;
+}
+.upload-video {
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 700px;
+  width: 70%;
+  background-color: #212529d1;
+  z-index: 2;
+  color: #fff;
+}
+.upload-video-container {
+  margin: 0 auto;
+  padding: 28%;
+}
+.upload-video-title {
+  font-size: 40px;
+  line-height: 1.75rem;
+  font-weight: 600;
+}
+.file-upload-icon {
+  font-size: 80px;
+}
+.file-upload-icon::after {
+  position: absolute;
+  content: "";
+  background-color: #7170704a;
+  width: 115px;
+  height: 115px;
+  top: 7px;
+  left: 170px;
+  border-radius: 50%;
+}
+.file-upload-title {
+  font-weight: 600;
+  line-height: 1.75rem;
+  font-size: 30px;
+}
+.upload-file-button {
+  border: 0.5px solid #ccc;
+  border-radius: 4px;
+  line-height: 1.5rem;
+  color: #212529;
+}
+.upload-file-button:hover {
+  background-color: #212529;
+  color: #fff;
+}
+.close-button {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  font-size: 28px;
+  background-color: rgba(0, 0, 0, 0);
+  border: none;
+}
+.close-button:hover {
+  color: #fff;
+}

@@ -1,0 +1,238 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <title>Title</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS v5.2.1 -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
+    <!-- font and icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+        integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <!-- chartJS -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+
+<body>
+    <header>
+        <div class="container-fluid p-0">
+            <nav class="navbar navbar-expand-lg bg-nav position-fixed w-100">
+                <div class="container-fluid">
+                    <a class="navbar-brand" href="#">Navbar</a>
+                    <button class="navbar-toggler button-toggle-nav" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false"
+                        aria-label="Toggle navigation">
+                        <i class="fa-solid fa-bars"></i>
+                    </button>
+                    <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+                        <!-- <ul class="navbar-nav">
+                            <li class="nav-item">
+                                <a class="nav-link active" aria-current="page" href="#">Home</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">Features</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">Pricing</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link disabled">Disabled</a>
+                            </li>
+                        </ul> -->
+                        <form class="d-flex position-relative me-5" role="search">
+                            <input style="width: 500px;" class="form-control me-2" type="search" placeholder="Search"
+                                aria-label="Search">
+                            <button class="btn button-nav-search position-absolute me-2" type="submit"><i
+                                    class="fa-solid fa-magnifying-glass"></i></button>
+                        </form>
+                        <ul class="navbar-nav">
+                            <li class="nav-item px-2">
+                                <a href=""> <i class="fa-solid fa-user"></i></a>
+                            </li>
+                            <li class="nav-item px-2">
+                                <a href="/auth/logout"><i class="fa-solid fa-right-from-bracket"></i></a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+            </nav>
+        </div>
+    </header>
+    <main>
+
+        <div class="asside">
+             <div class="my-5">
+                <a href="/admin/{{result.user_id}}" class="icons-nav p-3 my-3">
+                    <i class="fa-solid fa-house"></i>
+
+                </a>
+                Home
+            </div>
+            <div class="my-5">
+                <a href="/admin/{{result.user_id}}/coursesPage" class="icons-nav p-3 my-3">
+                    <i class="fa-brands fa-itunes-note"></i>
+
+                </a>
+                Courses
+            </div>
+            <div class="my-5">
+                <a href="/admin/{{result.user_id}}/quizPage" class="icons-nav p-3 my-3">
+                    <i class="fa-solid fa-book-open"></i>
+
+                </a>
+                Quizs
+            </div>
+            <div class="my-5">
+                <a href="/admin/{{result.user_id}}/earning" class="icons-nav p-3 my-3">
+                    <i class="fa-solid fa-coins"></i>
+
+                </a>
+                Earnings
+            </div>
+            <div class="my-5">
+                <a href="/admin/{{result.user_id}}/reportPage" class="icons-nav p-3 my-3">
+                    <i class="fa-solid fa-chart-line"></i>
+
+                </a>
+                Report
+            </div>
+
+        </div>
+
+        <div class="container-fluid pt-60 ps-125">
+            <div class="container">
+                <h1>Reports</h1>
+            </div>
+            <div class="container report-inf-container py-5">
+                <div class="row justify-content-center">
+                    <div class="col">
+                        <div
+                            class="user-visit-title d-flex justify-content-between align-items-center bg-light p-5 rounded-2 all-border">
+                            <h3><i class="fa-solid fa-chart-column"></i> Visit</h3>
+                            <span class="quantity-visit">100</span>
+                        </div>
+
+
+                    </div>
+                    <div class="col">
+                        <div
+                            class="user-visit-title d-flex justify-content-between align-items-center bg-light p-5 rounded-2 all-border">
+                            <h3><i class="fa-solid fa-sack-dollar"></i> Earnings</h3>
+                            <span class="quantity-visit">3.320.032 </span> VND
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div
+                            class="user-visit-title d-flex justify-content-between align-items-center bg-light p-5 rounded-2 all-border">
+                            <h3><i class="fa-solid fa-user"></i> Students</h3>
+                            <span class="quantity-visit">72</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="container total-view-section">
+                <div class="row">
+                    <div class="col-6">
+                        <div class="container bg-light all-border rounded-2 p-3">
+                            <h3 class="total-view-heading p-3">Total Views</h3>
+
+
+                            <canvas style="width: 600; height: 400;" id="totalView"></canvas>
+                        </div>
+                    </div>
+                    <div class="col-6">
+                        <div class="bg-light all-border rounded-2 p-3">
+                            <h3 class="recect-user-subcriber p-3">Recect Students Subcriber Courses</h3>
+
+                            <div class="user-subcriber-list ">
+                                <table class="table">
+                                    <thead>
+                                        <tr>
+                                            <th scope="col">#</th>
+                                            <th scope="col">First</th>
+                                            <th scope="col">Last</th>
+                                            <th scope="col">Handle</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <th scope="row">1</th>
+                                            <td>Mark</td>
+                                            <td>Otto</td>
+                                            <td>@mdo</td>
+                                        </tr>
+                                        <tr>
+                                            <th scope="row">2</th>
+                                            <td>Jacob</td>
+                                            <td>Thornton</td>
+                                            <td>@fat</td>
+                                        </tr>
+                                        <tr>
+                                            <th scope="row">3</th>
+                                            <td colspan="2">Larry the Bird</td>
+                                            <td>@twitter</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+    <footer>
+        <!-- place footer here -->
+    </footer>
+    <!-- Bootstrap JavaScript Libraries -->
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"
+        integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3" crossorigin="anonymous">
+        </script>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.min.js"
+        integrity="sha384-7VPbUDkoPSGFnVtYi0QogXtr74QeVeeIs99Qfg5YCF+TidwNdjvaKZX19NZ/e6oz" crossorigin="anonymous">
+        </script>
+
+    <script>
+        const purchasesChart = document.getElementById('totalView');
+
+        new Chart(purchasesChart, {
+            type: 'line',
+            data: {
+                labels: ['Jan', 'Feb', 'March', 'April', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'],
+                datasets: [{
+                    label: 'Total Views',
+                    data: [0, 12, 2, 20, 23, 25, 30, 10, 40, 70, 50, 60],
+                    borderWidth: 1,
+                    fillColor: "rgba(151,249,190,0.5)",
+                    strokeColor: "rgba(255,255,255,1)",
+                    pointColor: "rgba(220,220,220,1)",
+                    pointStrokeColor: "#fff",
+                    pointHitRadius: "500px",
+                    tension: 0.4,
+                },
+                ]
+            },
+            options: {
+                scales: {
+                    y: {
+                        beginAtZero: true
+                    }
+                }
+            }
+        });
+    </script>
+</body>
+
+</html>

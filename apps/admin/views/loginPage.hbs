@@ -1,0 +1,81 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <title>Login</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- css and fonts tag -->
+    <link rel="stylesheet" href="/css/authentication.css" />
+    <!-- font and icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+        integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- Bootstrap CSS v5.2.1 -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
+
+</head>
+
+<body style="background-color: #0d1117 !important;">
+    <header>
+
+    </header>
+    <main>
+        <div class="container-fluid">
+            <div class="d-flex justify-content-center display-3 py-3 text-white">Logo</div>
+            <div class="container ">
+                <div class="vertifyCode-wrapper">
+                    <h2 class="vertifyCode-title pb-3">Sign In</h2>
+                    <div style="background-color: red; text-align: center;">
+                        {{message}}
+                    </div>
+                    <div class="code-receive-place p-1">
+
+                        <form class="px-3 pb-3" action="/auth/login" method="post">
+                            <div class="pt-3 px-3">
+                                <label for="user-input-username" class="text-white">Email</label>
+                                <input type="text" name="email" id="user-input-username"
+                                    class="w-100 rounded-2 d-block p-1  my-2 input-code" placeholder="Enter Emai">
+                            </div>
+                            <div class=" px-3">
+                                <label for="user-input-pass" class="text-white">Password</label>
+                                <input type="text" name="password" id="user-input-pass"
+                                    class="w-100 rounded-2 d-block p-1  my-2 input-code" placeholder="Enter Password">
+                            </div>
+
+                            <div class="pt-3 px-3">
+                                <button class="vertify-button w-100 py-1 my-2 rounded-2" id="vertify-button"
+                                    name="vertify-button">Vertify</button>
+                            </div>
+                        </form>
+                    </div>
+                    <div class="resend-wrapper p-3 my-3">
+                        <h2 class="another-vertify-title px-3">New to Soleil?</h2>
+                        <ul class="vertify-ul px-3">
+                            <li><a href="/auth/register">Create account.</a></li>
+                        </ul>
+                        
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+    </main>
+    <footer>
+
+    </footer>
+    <!-- Bootstrap JavaScript Libraries -->
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"
+        integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3" crossorigin="anonymous">
+        </script>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.min.js"
+        integrity="sha384-7VPbUDkoPSGFnVtYi0QogXtr74QeVeeIs99Qfg5YCF+TidwNdjvaKZX19NZ/e6oz" crossorigin="anonymous">
+        </script>
+</body>
+
+</html>

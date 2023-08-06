@@ -1,0 +1,157 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <title>Register</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- css and fonts tag -->
+    <link rel="stylesheet" href="/css/authentication.css" />
+    <!-- font and icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+        integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <!-- Bootstrap CSS v5.2.1 -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
+
+</head>
+
+<body>
+    <header>
+        <!-- place navbar here -->
+    </header>
+    <main>
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-4 px-0 py-1">
+                    <div class="container px-5 ">
+                        <div class="d-flex justify-content-center mt-5">
+                            <img src="" alt="Logo" class="logo-register" width="100px" height="100px">
+                        </div>
+                        <h2 class="register-title text-center pb-5">Register</h2>
+
+                        <form action="/auth/register" id="register" method="post">
+                            <div class="mb-4 position-relative">
+
+                                <input type="text" class="form-control input-register py-2" name="user_name" autocomplete="off"
+                                    id="username-input" placeholder="">
+                                <label for="username-input" class="form-label absolute-label">Name</label>
+
+                            </div>
+                            <div class="mb-4 position-relative">
+
+                                <input type="email" class="form-control input-register py-2" name="email" id="email-input"
+                                    aria-describedby="helpId" placeholder="">
+                                <label for="email-input" class="form-label absolute-label">Email</label>
+
+                            </div>
+                            <div class="mb-4 d-flex justify-content-between">
+                                <div class="form-check">
+                                    <input class="form-check-input" type="radio" value="male" name="gender" id="">
+                                    <label class="form-check-label" for="">
+                                        Male
+                                    </label>
+                                </div>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="radio" value="female" name="gender" id="">
+                                    <label class="form-check-label" for="">
+                                        Female
+                                    </label>
+                                </div>
+                            </div>
+                            <div class="mb-4 position-relative">
+
+                                <input type="text" class="form-control input-register py-2" name="phone_number" id="phone-input"
+                                    aria-describedby="helpId" placeholder="">
+                                <label for="phone-input" class="form-label absolute-label">Phone Number</label>
+                            </div>
+                            <div class="mb-4 position-relative">
+
+                                <input type="password" class="form-control input-register py-2" name="password" id="password"
+                                    pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,}$"
+                                    aria-describedby="helpId" placeholder="">
+                                <label for="password" class="form-label absolute-label">Password</label>
+                            </div>
+                            <div class="mb-4 position-relative">
+
+                                <input type="password" class="form-control input-register py-2" name=""
+                                    id="confirmPassword" aria-describedby="helpId" placeholder="">
+                                <label for="confirmPassword" class="form-label absolute-label"> Comfirm Password</label>
+                            </div>
+
+                            <div class="d-flex justify-content-center">
+                                <button name="" id="" class="register-button-submit" type="submit">
+                                    <i class="fa-solid fa-arrow-right"></i>
+                                </button>
+                            </div>
+
+
+
+                        </form>
+                    </div>
+
+                </div>
+                <div class="col-8 p-0">
+                    <div class="img-container w-100 ">
+                        <img src="" alt="" width="100%">
+                    </div>
+                </div>
+                <div id="message">
+                    {{message}}
+                </div>
+            </div>
+        </div>
+    </main>
+    <footer>
+        <!-- place footer here -->
+    </footer>
+    <!-- Bootstrap JavaScript Libraries -->
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"
+        integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3" crossorigin="anonymous">
+        </script>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.min.js"
+        integrity="sha384-7VPbUDkoPSGFnVtYi0QogXtr74QeVeeIs99Qfg5YCF+TidwNdjvaKZX19NZ/e6oz" crossorigin="anonymous">
+        </script>
+    <script>
+        const passwordInput = document.getElementById('password');
+        const confirmPasswordInput = document.getElementById('confirmPassword');
+        const messageDiv = document.getElementById('message');
+
+        confirmPasswordInput.addEventListener('input', function() {
+        const password = passwordInput.value;
+        const confirmPassword = confirmPasswordInput.value;
+
+        if (password !== confirmPassword) {
+            showMessage('Passwords do not match.');
+        } else {
+            showMessage('Passwords matched!');
+        }
+        });
+
+        document.getElementById('confirmPasswordForm').addEventListener('submit', function(event) {
+        event.preventDefault();
+
+        const password = passwordInput.value;
+        const confirmPassword = confirmPasswordInput.value;
+
+        if (password !== confirmPassword) {
+            showMessage('Passwords do not match.');
+        } else {
+            showMessage('Passwords matched!');
+            // Tại đây, bạn có thể tiếp tục xử lý gửi form hoặc thực hiện các hành động khác sau khi xác nhận mật khẩu.
+        }
+        });
+
+        function showMessage(message) {
+        messageDiv.textContent = message;
+        messageDiv.style.color = 'red'; // Đổi màu chữ thành màu đỏ để làm nổi bật thông báo lỗi.
+        }
+    </script>
+</body>
+
+</html>

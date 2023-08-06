@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Email Template</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+    }
+
+    .email-container {
+      max-width: 600px;
+      margin: 0 auto;
+      padding: 20px;
+    }
+
+    .email-header {
+      text-align: center;
+      font-size: 24px;
+      font-weight: bold;
+      margin-bottom: 20px;
+    }
+
+    .email-content {
+      font-size: 16px;
+      margin-bottom: 20px;
+    }
+
+    .list-item {
+      margin-bottom: 10px;
+    }
+
+    .password-reset-link {
+      display: inline-block;
+      background-color: #007bff;
+      color: #fff;
+      padding: 10px 20px;
+      text-decoration: none;
+      border-radius: 5px;
+      margin-top: 20px;
+    }
+
+    .password-reset-link:hover {
+      background-color: #0056b3;
+    }
+  </style>
+</head>
+<body>
+  <div class="email-container">
+    <div class="email-header">Dear ,{{email}}</div>
+    <div class="email-content">
+      We hope this email finds you well and enjoying your experience with SolielMusic. We are writing to emphasize the critical importance of safeguarding your account and password information to ensure the security of your online presence.
+    </div>
+    <div class="email-content">
+      In recent times, cyber threats and data breaches have become increasingly prevalent, making it imperative for us all to take extra precautions to protect our personal information. At [Your Company/Organization Name], we take your security seriously, and we rely on your cooperation to maintain a safe digital environment for everyone.
+    </div>
+    <div class="email-content">
+      To help you secure your account, we kindly request that you follow these essential best practices:
+      <ul>
+        <li class="list-item">Strong Passwords: Create a unique and strong password that includes a combination of uppercase and lowercase letters, numbers, and special characters. Avoid using easily guessable information, such as birthdates or common words.</li>
+        <li class="list-item">Password Confidentiality: Keep your password confidential and refrain from sharing it with anyone, even individuals claiming to be part of our support team. Our official representatives will never ask for your password.</li>
+        <li class="list-item">Multi-Factor Authentication (MFA): Consider enabling MFA whenever possible, as it adds an extra layer of security by requiring an additional form of authentication beyond your password.</li>
+        <li class="list-item">Regular Password Updates: Periodically update your passwords to reduce the risk of unauthorized access to your account.</li>
+        <li class="list-item">Beware of Phishing Attempts: Stay vigilant against suspicious emails, links, or messages that request personal information. Always verify the sender's identity before providing any sensitive details.</li>
+      </ul>
+    </div>
+    <div class="email-content">
+      Now, if you ever forget your password or suspect any unauthorized activity on your account, don't worry! We've got you covered. You can easily reset your password by clicking on the following link:
+      <br>
+      <a class="password-reset-link" href="{{url}}">Reset Password</a>
+    </div>
+    <div class="email-content">
+      Please ensure that you keep this link safe and do not share it with anyone. It's essential to initiate the password reset process only through trusted channels, such as this email.
+    </div>
+    <div class="email-content">
+      Your account's security is our top priority, and we are committed to providing a safe environment for all our users.
+    </div>
+    <div class="email-content">
+      Thank you for your attention to this matter, and if you have any questions or concerns, please don't hesitate to reach out to our support team.
+    </div>
+    <div class="email-content" style="font-weight: bold;">
+      Best regards,<br>
+      PhucKhoa<br>
+      Manager<br>
+      Soliel Music
+    </div>
+  </div>
+</body>
+</html>

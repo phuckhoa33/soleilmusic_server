@@ -1,0 +1,113 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+  }
+  
+  /* vertifyPage start css */
+  .vertifyCode-wrapper {
+    width: 340px;
+    margin: 0 auto;
+    padding: 20px;
+  }
+  .code-receive-place,
+  .resend-wrapper {
+    background-color: #161b22;
+    border: 1px solid #30363d;
+    border-radius: 6px;
+  }
+  .resend-wrapper {
+    background-color: #0d1117;
+  }
+  .vertifyCode-title {
+    font-size: 24px;
+    font-weight: 300;
+    text-transform: capitalize;
+    line-height: 1.5rem;
+    text-align: center;
+    color: #e6edf3;
+  }
+  .email-icon {
+    font-size: 34px;
+    color: #7d8590;
+    line-height: 1.5rem;
+  }
+  .vertify-sms {
+    text-align: center;
+    font-size: 24px;
+    font-weight: 600;
+    color: #e6edf3;
+  }
+  .vertify-sms-rep,
+  .input-code-title,
+  .another-vertify-title,
+  .vertify-ul a {
+    color: #e6edf3;
+    line-height: 1.5rem;
+    font-size: 14px;
+  }
+  .input-code {
+    background-color: #0d1117;
+    border: 1px solid #30363d;
+  }
+  .vertify-button {
+    color: #e6edf3;
+    background-color: #238636;
+    border: none;
+  }
+  .vertify-ul a {
+    text-decoration: none;
+    color: #2f81f7;
+  }
+  /* vertifyPage end css */
+  
+  /* Register Start css */
+  .absolute-label {
+    position: absolute;
+    left: 12px;
+    top: 5px;
+  }
+  .input-register {
+    background: transparent;
+  }
+  .form-border {
+    box-shadow: 0px 4px 100px rgba(0, 0, 0, 0.1);
+  }
+  .input-register:focus ~ .absolute-label,
+  .input-register:invalid ~ .absolute-label {
+    font-size: 8px;
+    top: 2px;
+    left: 2px;
+    transition: top 200ms ease-in, left 200ms ease-in, font-size 200ms ease-in;
+  }
+  .input-register:focus {
+    border: 1px solid #0d1117 !important;
+    outline: none !important;
+    box-shadow: none !important;
+    border-radius: 0px !important;
+  }
+  .register-button-submit {
+    border: 1px solid #ccc;
+    padding: 1.25rem 1.75rem;
+    border-radius: 25%;
+    font-size: 28px;
+    color: #ccc;
+    outline: none;
+    background-color: #fff;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .register-button-submit:hover {
+    background-color: red;
+    border-color: red;
+    color: #fff;
+  }
+  
+  .img-container {
+    background-image: url("https://lolstatic-a.akamaihd.net/rso-login-page/3.2.39/assets/arcane_dsktp_centerAlignedCrd_BG_2x.jpg");
+    background-attachment: fixed;
+    background-size: cover;
+    height: 110%;
+  }
+  /* Register End css */
+  

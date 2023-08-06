@@ -1,0 +1,257 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <title>Title</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS v5.2.1 -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
+
+    <!-- chartJS -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="/css/style.css">
+
+    <!-- font and icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+        integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+</head>
+
+<body>
+    <header>
+        <div class="container-fluid p-0">
+            <nav class="navbar navbar-expand-lg bg-nav position-fixed w-100">
+                <div class="container-fluid">
+                    <a class="navbar-brand" href="#">Navbar</a>
+                    <button class="navbar-toggler button-toggle-nav" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false"
+                        aria-label="Toggle navigation">
+                        <i class="fa-solid fa-bars"></i>
+                    </button>
+                    <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+                        <!-- <ul class="navbar-nav">
+                            <li class="nav-item">
+                                <a class="nav-link active" aria-current="page" href="#">Home</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">Features</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">Pricing</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link disabled">Disabled</a>
+                            </li>
+                        </ul> -->
+                        <form class="d-flex position-relative me-5" role="search">
+                            <input style="width: 500px;" class="form-control me-2" type="search" placeholder="Search"
+                                aria-label="Search">
+                            <button class="btn button-nav-search position-absolute me-2" type="submit"><i
+                                    class="fa-solid fa-magnifying-glass"></i></button>
+                        </form>
+                        <ul class="navbar-nav">
+                            <li class="nav-item px-2">
+                                <a href=""> <i class="fa-solid fa-user"></i></a>
+                            </li>
+                            <li class="nav-item px-2">
+                                <a href="/auth/logout"><i class="fa-solid fa-right-from-bracket"></i></a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+            </nav>
+        </div>
+    </header>
+    <main>
+
+        <div class="asside">
+             <div class="my-5">
+                <a href="/admin/{{result.user_id}}" class="icons-nav p-3 my-3">
+                    <i class="fa-solid fa-house"></i>
+
+                </a>
+                Home
+            </div>
+            <div class="my-5">
+                <a href="/admin/{{result.user_id}}/coursesPage" class="icons-nav p-3 my-3">
+                    <i class="fa-brands fa-itunes-note"></i>
+
+                </a>
+                Courses
+            </div>
+            <div class="my-5">
+                <a href="/admin/{{result.user_id}}/quizPage" class="icons-nav p-3 my-3">
+                    <i class="fa-solid fa-book-open"></i>
+
+                </a>
+                Quizs
+            </div>
+            <div class="my-5">
+                <a href="/admin/{{result.user_id}}/earning" class="icons-nav p-3 my-3">
+                    <i class="fa-solid fa-coins"></i>
+
+                </a>
+                Earnings
+            </div>
+            <div class="my-5">
+                <a href="/admin/{{result.user_id}}/reportPage" class="icons-nav p-3 my-3">
+                    <i class="fa-solid fa-chart-line"></i>
+
+                </a>
+                Report
+            </div>
+
+        </div>
+        <div class="container-fluid pt-60 ps-125">
+            <div class="container position-relative">
+                <h1 class="earning-heading py-2">Earnings</h1>
+            </div>
+            <div class="container ">
+                <div class="row justify-content-center align-items-center g-2">
+
+                    <div class="col-4 ">
+                        <div class="bg-light billing-cycle-border ">
+                            <h3 class="billing-cycle-heading">Current Balance</h3>
+                            <h5 class="billing-cycle-title">This billing cycle</h5>
+                            <div>
+                                <canvas style="width: 600; height: 400;" id="billing-cycle"></canvas>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-8">
+                        <div class="bg-light">
+                            <h3 class="purchases-heading">Purchase</h3>
+                            <h5 class="purchases-title">This billing cycle</h5>
+                            <div>
+                                <canvas style="width: 600; height: 400;" id="purchases"></canvas>
+                            </div>
+                        </div>
+
+                    </div>
+
+                </div>
+            </div>
+            <div class="container student-section my-3">
+                <div class="bg-light">
+                    <h3 class="student-heading">Current Member</h3>
+                    <h5 class="lastest-member">Lastest Member</h5>
+
+                    <div class="container-fluid">
+                        <form class="d-flex" role="search">
+                            <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                            <button class="btn btn-outline-success" type="submit">Search</button>
+                        </form>
+                    </div>
+
+                    <div class="userlist">
+                        <table class="table">
+                            <thead>
+                                <tr>
+                                    <th scope="col">#</th>
+                                    <th scope="col">First</th>
+                                    <th scope="col">Last</th>
+                                    <th scope="col">Handle</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <th scope="row">1</th>
+                                    <td>Mark</td>
+                                    <td>Otto</td>
+                                    <td>@mdo</td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">2</th>
+                                    <td>Jacob</td>
+                                    <td>Thornton</td>
+                                    <td>@fat</td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">3</th>
+                                    <td colspan="2">Larry the Bird</td>
+                                    <td>@twitter</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+    <footer>
+        <!-- place footer here -->
+    </footer>
+    <!-- Bootstrap JavaScript Libraries -->
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"
+        integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3" crossorigin="anonymous">
+        </script>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.min.js"
+        integrity="sha384-7VPbUDkoPSGFnVtYi0QogXtr74QeVeeIs99Qfg5YCF+TidwNdjvaKZX19NZ/e6oz" crossorigin="anonymous">
+        </script>
+
+    <script>
+        const billingCycleChart = document.getElementById('billing-cycle')
+
+        new Chart(billingCycleChart, {
+            type: 'doughnut',
+            data: {
+                labels: [
+                    'Red',
+                    'Blue',
+                    'Yellow'
+                ],
+                datasets: [{
+                    label: 'My First Dataset',
+                    data: [300, 50, 100],
+                    backgroundColor: [
+                        'rgb(255, 99, 132)',
+                        'rgb(54, 162, 235)',
+                        'rgb(255, 205, 86)'
+                    ],
+                    hoverOffset: 4,
+                    weight: 0.1
+                }]
+            }
+        })
+
+
+        const purchasesChart = document.getElementById('purchases');
+
+        new Chart(purchasesChart, {
+            type: 'line',
+            data: {
+                labels: ['Jan', 'Feb', 'March', 'April', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'],
+                datasets: [{
+                    label: 'Profit',
+                    data: [0, 20000, 100000, 200000, 10000, 50000, 120000, 300000, 150000, 70000, 100000, 170000],
+                    borderWidth: 1,
+                    fillColor: "rgba(151,249,190,0.5)",
+                    strokeColor: "rgba(255,255,255,1)",
+                    pointColor: "rgba(220,220,220,1)",
+                    pointStrokeColor: "#fff",
+                    pointHitRadius: "500px",
+                    tension: 0.4,
+                },
+                ]
+            },
+            options: {
+                scales: {
+                    y: {
+                        beginAtZero: true
+                    }
+                }
+            }
+        });
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,116 @@
+*, *::after, *::before {
+    box-sizing:border-box;  
+  }
+  
+  :root {
+    --color-main:#333;
+    --color-background:#ccc;
+  }
+  
+  body {
+      min-height:100dvh;
+    margin:0;
+    background-color:var(--color-background);
+    color:var(--color-main);
+      
+      display:grid;
+      place-content:center;
+  }
+  
+  ul {
+      --length:6;
+      
+      --duration:2;
+      
+      margin:0;
+      padding:0 1em;
+      list-style:none;
+      
+      display:flex;
+      gap:.33em;
+      
+      border-bottom:solid .05em #000;
+      
+      font-size:3em;
+  }
+  
+  @keyframes squash-animation {
+    0%    { transform: none; }
+    10.5% { transform: scale(1.2, .8); }
+    21%   { transform: scale(.9, 1.1); }
+    27%   {
+          transform: scale(1.35, .65);
+      animation-timing-function:cubic-bezier(0.165, 0.840, 0.440, 1.000);
+      }
+    45% {
+          transform: translatey(-3em) scale(.67, 1.5); 
+      animation-timing-function:cubic-bezier(0.895, 0.030, 0.685, 0.220); 
+      }
+    63%   { transform: scale(2, .25); }
+    72%   { transform: scale(.8, 1.2); }
+    78%   { transform: scale(1.1, .9); }
+    82.5% { transform: scale(.95, 1.05); }
+    87%   { transform: scale(1.02, .98); }
+      90%,
+      100%  { transform: none; }
+  }
+  
+  li {
+      width:1em;
+      aspect-ratio:1;
+      
+      background-image:
+          linear-gradient(
+              #000 25%,
+              deeppink 0 35%,
+              #000 0 45%,
+              yellow 0 55%,
+              #000 0 65%,
+              deeppink 0 75%,
+              #000 0
+          );
+      
+      transform-origin:bottom;
+      
+      animation-name:squash-animation;
+      animation-duration:calc( var(--duration) * 1s );
+      animation-iteration-count:infinite;
+      animation-fill-mode:backwards;
+      animation-delay:calc( var(--duration) * 1s / var(--length) * ( var(--index) - var(--length) ) );
+  }
+  
+  li:nth-of-type(1) {
+      --index:0;
+  }
+  
+  li:nth-of-type(2) {
+      --index:1;
+  }
+  
+  li:nth-of-type(3) {
+      --index:2;
+  }
+  
+  li:nth-of-type(4) {
+      --index:3;
+  }
+  
+  li:nth-of-type(5) {
+      --index:4;
+  }
+  
+  li:nth-of-type(6) {
+      --index:5;
+  }
+  
+  li:nth-of-type(7) {
+      --index:6;
+  }
+  
+  li:nth-of-type(1) { --index:0; }
+  li:nth-of-type(2) { --index:1; }
+  li:nth-of-type(3) { --index:2; }
+  li:nth-of-type(4) { --index:3; }
+  li:nth-of-type(5) { --index:4; }
+  li:nth-of-type(6) { --index:5; }
+  li:nth-of-type(7) { --index:6; }

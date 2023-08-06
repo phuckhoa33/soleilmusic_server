@@ -1,0 +1,308 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <title>videos</title>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <!-- Bootstrap CSS v5.2.1 -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
+
+  <!-- css -->
+  <link rel="stylesheet" href="/css/style.css">
+
+  <!-- type srcipt library -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css">
+
+  <!-- font and icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+
+<body>
+  <header>
+    <div class="container-fluid p-0">
+      <nav class="navbar navbar-expand-lg bg-nav position-fixed w-100">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="#">Navbar</a>
+          <button class="navbar-toggler button-toggle-nav" type="button" data-bs-toggle="collapse"
+            data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="fa-solid fa-bars"></i>
+          </button>
+          <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+            <!-- <ul class="navbar-nav">
+                      <li class="nav-item">
+                          <a class="nav-link active" aria-current="page" href="#">Home</a>
+                      </li>
+                      <li class="nav-item">
+                          <a class="nav-link" href="#">Features</a>
+                      </li>
+                      <li class="nav-item">
+                          <a class="nav-link" href="#">Pricing</a>
+                      </li>
+                      <li class="nav-item">
+                          <a class="nav-link disabled">Disabled</a>
+                      </li>
+                  </ul> -->
+            <form class="d-flex position-relative me-5" role="search">
+              <input style="width: 500px;" class="form-control me-2" type="search" placeholder="Search"
+                aria-label="Search">
+              <button class="btn button-nav-search position-absolute me-2" type="submit"><i
+                  class="fa-solid fa-magnifying-glass"></i></button>
+            </form>
+            <ul class="navbar-nav">
+              <li class="nav-item px-2">
+                <a href=""> <i class="fa-solid fa-user"></i></a>
+              </li>
+              <li class="nav-item px-2">
+                <a href=""><i class="fa-solid fa-right-from-bracket"></i></a>
+              </li>
+            </ul>
+          </div>
+        </div>
+
+      </nav>
+    </div>
+  </header>
+  <main>
+
+    <div class="asside">
+            <div class="my-5">
+                <a href="/admin/{{result.user_id}}" class="icons-nav p-3 my-3">
+                    <i class="fa-solid fa-house"></i>
+
+                </a>
+                Home
+            </div>
+            <div class="my-5">
+                <a href="/admin/{{result.user_id}}/coursesPage" class="icons-nav p-3 my-3">
+                    <i class="fa-brands fa-itunes-note"></i>
+
+                </a>
+                Courses
+            </div>
+            <div class="my-5">
+                <a href="/admin/{{result.user_id}}/quizPage" class="icons-nav p-3 my-3">
+                    <i class="fa-solid fa-book-open"></i>
+
+                </a>
+                Quizs
+            </div>
+            <div class="my-5">
+                <a href="/admin/{{result.user_id}}/earning" class="icons-nav p-3 my-3">
+                    <i class="fa-solid fa-coins"></i>
+
+                </a>
+                Earnings
+            </div>
+            <div class="my-5">
+                <a href="/admin/{{result.user_id}}/reportPage" class="icons-nav p-3 my-3">
+                    <i class="fa-solid fa-chart-line"></i>
+
+                </a>
+                Report
+            </div>
+
+        </div>
+    <div class="container-fluid pt-60 ps-125">
+
+      <div class="container bg-light all-border">
+        <h1 class="p-3 my-3">Create Course</h1>
+
+        <div class="button-add-video-container float-end">
+          <button class="button-add-video py-2 px-4">
+            <i class="fa-solid fa-plus"></i>
+            Add Video</button>
+        </div>
+
+        <div class="row">
+          <div class="col-3">
+            <div class="container-fluid create-course-title all-border px-2">
+              <div class="img-upload-container">
+                <h1>Choose Course Avatar
+                  <small>with preview</small>
+                </h1>
+                <div class="avatar-upload">
+                  <div class="avatar-edit">
+                    <input type='file' id="imageUpload" class="d-none" accept=".png, .jpg, .jpeg" />
+                    <label for="imageUpload"></label>
+                  </div>
+                  <div class="avatar-preview">
+                    <div id="imagePreview">
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="course-upload-name">
+                <div class="mb-3">
+                  <label for="" class="form-label">Name</label>
+                  <input type="text" class="form-control" name="" id="" aria-describedby="helpId" placeholder="">
+
+                </div>
+              </div>
+              <div class="course-upload-desc">
+                <div class="mb-3">
+                  <label for="" class="form-label">Description</label>
+                  <textarea class="form-control" name="" id="" rows="3"></textarea>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-9">
+            <div class="container-fluid p-0">
+              <div class="upload-section-title">
+                <h3 class="p-3 my-3">Videos of Course</h3>
+              </div>
+              <div class="upload-video-section">
+                <table class="table">
+                  <thead>
+                    <tr>
+                      <th scope="col" style="width: 10px;"><input type="checkbox"></th>
+                      <th scope="col" class="w-50">Video</th>
+                      <th scope="col">Move</th>
+                      <th scope="col">Change Video</th>
+                      <th scope="col">Delete</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td><input type="checkbox" class="select-mutil-video  my-3"></td>
+                      <td>
+                        <div class="upload-video-section-preview-container d-flex">
+                          <div class="upload-video-section-preview-img">
+                            <img
+                              src="https://media.istockphoto.com/id/1303586206/vi/vec-to/th%C6%B0-g-v%E1%BB%9Bi-logo-guitar.jpg?s=1024x1024&w=is&k=20&c=j3SHqgfua7_4IFnT14yATwC9X9OubIYYJACjrM0BmN0="
+                              class="h-100" alt="">
+                          </div>
+                          <div class="upload-video-section-preview-title p-2">this is Title</div>
+                        </div>
+                      </td>
+                      <td>
+                        <div class="move-video-container p-2 ">
+                          <button class="move-video-up p-1">
+                            <i class="fa-solid fa-arrow-up"></i>
+                          </button>
+                          <button class="move-video-down ms-2 p-1">
+                            <i class="fa-solid fa-arrow-down"></i>
+                          </button>
+                        </div>
+                      </td>
+                      <td>
+                        <div class="change-video-container">
+                          <button class="change-video-button p-2 mx-4">
+                            <i class="fa-solid fa-repeat"></i>
+                          </button>
+                        </div>
+                      </td>
+                      <td>
+                        <div class="delete-video-container">
+                          <button class="delete-video-button p-2">
+                            <i class="fa-solid fa-trash-can"></i>
+                          </button>
+                        </div>
+                      </td>
+
+                    </tr>
+
+
+                  </tbody>
+                </table>
+
+                <div class="upload-controller-container py-3 float-end">
+                  <button class="continue-button py-2 px-4 me-3">
+                    Continue
+                  </button>
+
+                  <button class="delete-select-video py-2 px-4">
+                    Delete Videos Selected
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- modal start -->
+
+    <div class="container-fluid position-fixed upload-video d-none">
+      <div class="container d-flex justify-content-center upload-video-container text-center flex-column">
+        <button class="close-button">
+          <i class="fa-solid fa-xmark"></i>
+        </button>
+        <h1 class="upload-video-title pb-5">Upload Files</h1>
+
+        <div class="file-container">
+          <div class="file-upload-icon position-relative">
+            <i class="fa-solid fa-file-arrow-up"></i>
+          </div>
+          <div class="file-upload-title py-3">
+            Drag & Drop
+          </div>
+          <div class="desc-upload1"><small>Your files here or browse to upload</small></div>
+          <div class="desc-upload2"><small>Video will be set at private</small></div>
+          <div class="upload-file-button-container py-3">
+            <button class="upload-file-button py-2 px-4">Upload</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- modal end -->
+
+  </main>
+  <footer>
+    <!-- place footer here -->
+  </footer>
+  <!-- Bootstrap JavaScript Libraries -->
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"
+    integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3" crossorigin="anonymous">
+    </script>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.min.js"
+    integrity="sha384-7VPbUDkoPSGFnVtYi0QogXtr74QeVeeIs99Qfg5YCF+TidwNdjvaKZX19NZ/e6oz" crossorigin="anonymous">
+    </script>
+  <script>
+    function readURL(input) {
+      if (input.files && input.files[0]) {
+        var reader = new FileReader();
+        reader.onload = function (e) {
+          $('#imagePreview').css('background-image', 'url(' + e.target.result + ')');
+          $('#imagePreview').hide();
+          $('#imagePreview').fadeIn(650);
+        }
+        reader.readAsDataURL(input.files[0]);
+      }
+    }
+    $("#imageUpload").change(function () {
+      readURL(this);
+    });
+  </script>
+  <script>
+    const modal = document.querySelector('.upload-video');
+    const addVideoBtn = document.querySelector('.button-add-video');
+    const modalContainer = document.querySelector('.upload-video-container');
+    const closeBtn = document.querySelector('.close-button');
+
+    function showUploadVideo() {
+      modal.classList.remove('d-none');
+    }
+    function closeUploadVideo() {
+      modal.classList.add('d-none');
+    }
+
+    addVideoBtn.addEventListener('click', showUploadVideo);
+    modal.addEventListener('click', closeUploadVideo);
+    closeBtn.addEventListener('click', closeUploadVideo);
+    modalContainer.addEventListener('click', function (e) {
+      e.stopPropagation();
+    })
+  </script>
+</body>
+
+</html>

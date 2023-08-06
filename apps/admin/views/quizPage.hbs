@@ -1,0 +1,225 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <title>Title</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS v5.2.1 -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
+
+    <!-- font and icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+        integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="/css/style.css">
+
+    <!-- font and icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+        integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+
+
+<body>
+    <header>
+        <div class="container-fluid p-0">
+            <nav class="navbar navbar-expand-lg bg-nav position-fixed w-100">
+                <div class="container-fluid">
+                    <a class="navbar-brand" href="#">Navbar</a>
+                    <button class="navbar-toggler button-toggle-nav" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false"
+                        aria-label="Toggle navigation">
+                        <i class="fa-solid fa-bars"></i>
+                    </button>
+                    <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+                        <!-- <ul class="navbar-nav">
+                            <li class="nav-item">
+                                <a class="nav-link active" aria-current="page" href="#">Home</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">Features</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">Pricing</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link disabled">Disabled</a>
+                            </li>
+                        </ul> -->
+                        <form class="d-flex position-relative me-5" role="search">
+                            <input style="width: 500px;" class="form-control me-2" type="search" placeholder="Search"
+                                aria-label="Search">
+                            <button class="btn button-nav-search position-absolute me-2" type="submit"><i
+                                    class="fa-solid fa-magnifying-glass"></i></button>
+                        </form>
+                        <ul class="navbar-nav">
+                            <li class="nav-item px-2">
+                                <a href=""> <i class="fa-solid fa-user"></i></a>
+                            </li>
+                            <li class="nav-item px-2">
+                                <a href="/auth/logout"><i class="fa-solid fa-right-from-bracket"></i></a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+            </nav>
+        </div>
+    </header>
+    <main>
+
+        <div class="asside">
+             <div class="my-5">
+                <a href="/admin/{{result.user_id}}" class="icons-nav p-3 my-3">
+                    <i class="fa-solid fa-house"></i>
+
+                </a>
+                Home
+            </div>
+            <div class="my-5">
+                <a href="/admin/{{result.user_id}}/coursesPage" class="icons-nav p-3 my-3">
+                    <i class="fa-brands fa-itunes-note"></i>
+
+                </a>
+                Courses
+            </div>
+            <div class="my-5">
+                <a href="/admin/{{result.user_id}}/quizPage" class="icons-nav p-3 my-3">
+                    <i class="fa-solid fa-book-open"></i>
+
+                </a>
+                Quizs
+            </div>
+            <div class="my-5">
+                <a href="/admin/{{result.user_id}}/earning" class="icons-nav p-3 my-3">
+                    <i class="fa-solid fa-coins"></i>
+
+                </a>
+                Earnings
+            </div>
+            <div class="my-5">
+                <a href="/admin/{{result.user_id}}/reportPage" class="icons-nav p-3 my-3">
+                    <i class="fa-solid fa-chart-line"></i>
+
+                </a>
+                Report
+            </div>
+
+        </div>
+        <div class="container-fluid pt-60 ps-125">
+            <div class="container">
+                <div class="row quiz-headding add-quiz">
+                    <div class="col-6">
+                        <h1 class="quiz-heading m-2">Quiz</h1>
+                    </div>
+                    <div class="col-6">
+                        <button class="add-quiz-button float-end p-2 m-3" name="add-quiz-button">
+                            <i class="fa-solid fa-plus"></i>
+                            New Quiz
+                        </button>
+                    </div>
+                </div>
+
+
+                <div class="container py-4">
+                    <div class="col-6 category d-flex ">
+                        <div class="category-title">Category</div>
+                        <select class="form-select" aria-label="Default select example">
+                            <option selected>Open this select menu</option>
+                            <option value="1">One</option>
+                            <option value="2">Two</option>
+                            <option value="3">Three</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="container list-quiz bg-light py-5 section-border">
+                    <div class="row">
+                        <div class="col-sm-6">
+                            <div class="card border-0 all-border">
+                                <div class="card-body">
+                                    <div class="row">
+                                        <div class="col-3">
+                                            <img src="https://media.istockphoto.com/id/1303586206/vi/vec-to/th%C6%B0-g-v%E1%BB%9Bi-logo-guitar.jpg?s=1024x1024&w=is&k=20&c=j3SHqgfua7_4IFnT14yATwC9X9OubIYYJACjrM0BmN0="
+                                                alt="" width="100%" height="100%">
+                                        </div>
+                                        <div class="col-9">
+                                            <h5 class="card-title quiz-title">Khoá học đệm hát cơ bản Soleil</h5>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-3"></div>
+                                        <div class="col-9">
+                                            <div class="card-content">
+                                                <p class="card-text quiz-desc">Let's start guitar basic quickly and
+                                                    learn some
+                                                    tips to play it</p>
+                                                <a href="#" class=" quiz-edit-button p-2 m-3 float-end">
+                                                    <i class="fa-solid fa-pen pe-1"></i>
+                                                    edit
+                                                    Quiz</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-sm-6">
+                            <div class="card all-border border-0 ">
+                                <div class="card-body">
+                                    <div class="row">
+                                        <div class="col-3">
+                                            <img src="https://media.istockphoto.com/id/1303586206/vi/vec-to/th%C6%B0-g-v%E1%BB%9Bi-logo-guitar.jpg?s=1024x1024&w=is&k=20&c=j3SHqgfua7_4IFnT14yATwC9X9OubIYYJACjrM0BmN0="
+                                                alt="" width="100%" height="100%">
+                                        </div>
+                                        <div class="col-9">
+                                            <h5 class="card-title quiz-title">Khoá học đệm hát cơ bản Soleil</h5>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-3"></div>
+                                        <div class="col-9">
+                                            <div class="card-content">
+                                                <p class="card-text quiz-desc">Let's start guitar basic quickly and
+                                                    learn some
+                                                    tips to play it</p>
+                                                <a href="#" class=" quiz-edit-button p-2 m-3 float-end">
+                                                    <i class="fa-solid fa-pen pe-1"></i>
+                                                    Edit
+                                                    quiz</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+        </div>
+        </div>
+    </main>
+    <footer>
+        <!-- place footer here -->
+    </footer>
+    <!-- Bootstrap JavaScript Libraries -->
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"
+        integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3" crossorigin="anonymous">
+        </script>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.min.js"
+        integrity="sha384-7VPbUDkoPSGFnVtYi0QogXtr74QeVeeIs99Qfg5YCF+TidwNdjvaKZX19NZ/e6oz" crossorigin="anonymous">
+        </script>
+</body>
+
+</html>
