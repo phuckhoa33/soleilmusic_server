@@ -10,7 +10,7 @@ async function bootstrap() {
   app.use(cookieParser());
   app.enableCors();
   app.setViewEngine('hbs');
-  const port = process.env.PORT || 8000;
+  const port: number = parseInt(`${process.env.PORT}`) || 8000;
   await app.listen(port);
 }
 bootstrap();
