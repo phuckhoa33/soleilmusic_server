@@ -1,1 +1,1 @@
-web: npm run start:dev user-api
+web: npm run start:prod
