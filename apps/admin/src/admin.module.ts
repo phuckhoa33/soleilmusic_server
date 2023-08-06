@@ -17,7 +17,7 @@ import { CourseModule } from './course/course.module';
     ConfigModule.forRoot({isGlobal: true}),
     TypeOrmModule.forRoot({
       type: 'mysql',
-      url: process.env.DATABASE_URL,
+      url: process.env.CLEARDB_DATABASE_URL,
       autoLoadEntities: true,
       synchronize: true
     }),
